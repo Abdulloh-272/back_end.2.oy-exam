@@ -46,7 +46,7 @@ while True:
             studen_school = int(input('School: '))
             studen_class = int(input('Student class: '))
             students_age = int(input('Studen Age: '))
-            students[len(students)+1] = {"name":studen_name,'school': studen_school,"class":students_age}
+            students[len(students)+1] = {"name":studen_name,'school': studen_school,"class":studen_class,'age':students_age}
             for key,value in students.items():
                 print(key,value)
     elif savol == 2:
@@ -63,10 +63,12 @@ while True:
         for key,value in students.items():
             print(key,value)
         delete_student = int(input('Remove student: '))
-        for i in students:
-            if i == delete_student:
-                students.pop(delete_student)
-        print(students[i])
+        students.pop(delete_student)
+        for key,value in students.items():
+            print(key,value)
+
+
+            
 
 
         
